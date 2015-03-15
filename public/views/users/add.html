@@ -1,0 +1,92 @@
+<div ui-view>
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Add User
+        </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <form>
+            <!-- Default box -->
+            <div class="box box-danger">
+                <div class="box-body">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>First name</label>
+                                <input type="text" class="form-control" ng-model="formData.firstname"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Last name</label>
+                                <input type="text" class="form-control" ng-model="formData.lastname"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control" ng-model="formData.emailaddress"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Role</label>
+                                <select class="form-control" ng-model="formData.role">
+                                    <option value="1">Developer</option>
+                                    <option value="2">Client</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" >
+                                <label>Password</label>
+                                <input type="password" class="form-control" ng-model="formData.password"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Confirm password</label>
+                                <input type="password" class="form-control" ng-model="formData.confirmpassword"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Gender</label><br/>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male" ng-model="formData.gender"> Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female" ng-model="formData.gender"> Gender
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Mobile number </label>
+                                <input type="text" class="form-control" ng-model="formData.mobileno"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div><!-- /.box-body -->
+                <div class="box-footer text-right">
+                    <button class="btn btn-default" ui-sref="home.users"><i class="fa fa-arrow-circle-left"></i> Back</button>
+                    <button class="btn btn-danger"><i class="fa fa-check-circle" ng-click="submitForm()"></i> Save</button>
+                </div><!-- /.box-footer-->
+            </div><!-- /.box -->
+        </form>
+    </section><!-- /.content -->
+</div>
